@@ -18,3 +18,4 @@ require([/* Dependencies */], function () {
     app.initialize();
 
 });
+$(document).foundation();
