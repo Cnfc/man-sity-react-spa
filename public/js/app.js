@@ -12,6 +12,7 @@ require([/* Dependencies */], function () {
     var app = {
         initialize: function () {
             // Your code here
+            console.log('code is working');
         }
     };
 
