@@ -98,34 +98,34 @@ class Text extends Component {
     </Animate>
   );
 
-  //
-  // animatePlayer = () => (
-  //   <Animate
-  //   show= {true}
-  //   start={{
-  //     opacity:0,
-  //
-  //   }}
-  //   enter={{
-  //     opacity:[1],
-  //     timing:{duration: 800, ease: easePolyOut}
-  //   }}
-  //   >
-  //
-  //     {({opacity}) => {
-  //       return(
-  //         <div className="featured_player"
-  //           style={{
-  //             opacity,
-  //             background: `url(${FeaturedPlayer})`,
-  //             transform: `translate(550px, 201px)`
-  //         }}
-  //         >
-  //         </div>
-  //       )
-  //     }}
-  //   </Animate>
-  // );
+
+  animatePlayer = () => (
+    <Animate
+    show= {true}
+    start={{
+      opacity:0,
+
+    }}
+    enter={{
+      opacity:[1],
+      timing:{duration: 800, ease: easePolyOut}
+    }}
+    >
+
+      {({opacity}) => {
+        return(
+          <div className="featured_player"
+            style={{
+              opacity,
+              background: `url(${FeaturedPlayer})`,
+              transform: `translate(550px, 201px)`
+          }}
+          >
+          </div>
+        )
+      }}
+    </Animate>
+  );
 
 
   render() {
