@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PromotionAnimation from './Animation';
+import Enroll from './Enroll';
 
 
 const Promotion = () => {
@@ -7,6 +8,7 @@ const Promotion = () => {
     <div className='promotion_wrapper' style={{background: '#ffffff'}}>
       <div className='container'></div>
         <PromotionAnimation/>
+        <Enroll/>
     </div>
   );
 };
