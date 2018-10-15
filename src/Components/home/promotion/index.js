@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PromotionAnimation from './Animation';
 import Enroll from './Enroll';
 
