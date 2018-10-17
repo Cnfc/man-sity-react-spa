@@ -115,10 +115,9 @@ class Enroll extends Component {
               <FormField
                 id={'email'}
                 formdata={this.state.formdata.email}
-                change={(element) => this.updateForm(element)
-
-                }
+                change={(element) => this.updateForm(element)}
               />
+
             {this.state.formError ? <div className="error_label">Something is wrong</div> : null}
             <div className="success_label">{this.state.formSuccess}</div>
             <button onClick={(event) => this.submitForm(event)}>Enroll</button>
