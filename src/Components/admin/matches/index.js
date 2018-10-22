@@ -58,7 +58,7 @@ class AdminMatches extends Component {
                             </Link>
                           </TableCell>
                           <TableCell>
-                            {match.resultAway} <stromg>-</stromg> {match.resultLocal}
+                            {match.resultAway} <strong>-</strong> {match.resultLocal}
                           </TableCell>
                           <TableCell>
                             {match.final === "Yes" ?

@@ -27,9 +27,6 @@ const MatchesHome = () => {
             See more matches
           </Tag>
 
-
-
-
       </div>
     </div>
   );
