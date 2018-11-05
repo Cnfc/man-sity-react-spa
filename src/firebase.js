@@ -15,6 +15,7 @@ import 'firebase/database';
 
 firebase.initializeApp(config);
 
+// Connect firebase
 const firebaseDB = firebase.database();
 const firebaseMatches = firebaseDB.ref('matches');
 const firebasePromotions = firebaseDB.ref('promotions');
