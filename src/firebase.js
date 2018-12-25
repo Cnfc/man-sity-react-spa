@@ -2,6 +2,7 @@ import firebase from 'firebase/app';
 
 import 'firebase/app';
 import 'firebase/database';
+import 'firebase/auth';
 
 
 // <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
