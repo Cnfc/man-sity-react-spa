@@ -15,7 +15,7 @@ import 'firebase/auth';
     storageBucket: "m-city-65172.appspot.com",
     messagingSenderId: "894486813632"
   };
-  firebase.initializeApp(config);
+  firebase.initializeApp(config); 
 
     //Alias
         const firebaseDB = firebase.database();
