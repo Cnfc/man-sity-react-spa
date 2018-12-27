@@ -1,38 +1,32 @@
 import React from 'react';
-import {Tag} from '../../ui/misc';
+import { Tag } from '../../ui/misc'
 import Blocks from './Blocks';
 
-
-const MatchesHome = () => {
-  return (
-    <div className='home_matches_wrapper'>
-      <div className="container">
-        <Tag
-            bck="#0e1731"
-            size='50px'
-            color="#ffffff"
-          >
-          Matches
-        </Tag>
-
-        <Blocks/>
-
-          <Tag
-              bck="#ffffff"
-              size='22px'
-              color="#0e1731"
-              link={true}
-              linkto='/the_team'
+const MatchesHome = (props) => (
+    <div className="home_matches_wrapper">
+        <div className="container">
+            <Tag 
+                bck="#0e1731"
+                size="50px"
+                color="#ffffff"
             >
-            See more matches
-          </Tag>
 
+                Matches
+            </Tag>
+            
+            <Blocks />
 
-
-
-      </div>
+            <Tag 
+                bck="#ffffff"
+                size="22px"
+                color="#0e1731"
+                link={true}
+                linkto='/the_team'
+            >
+                See more Matches
+            </Tag>
+        </div> 
     </div>
-  );
-};
+);
 
 export default MatchesHome;

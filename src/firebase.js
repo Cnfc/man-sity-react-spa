@@ -1,10 +1,13 @@
 import firebase from 'firebase/app';
+
 import 'firebase/app';
 import 'firebase/database';
+import 'firebase/auth';
 
 
+// <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
   // Initialize Firebase
-  const config = {
+  const  config = {
     apiKey: "AIzaSyADo-Yd11eAB77baPfia53BwRycDhwk7b0",
     authDomain: "m-city-65172.firebaseapp.com",
     databaseURL: "https://m-city-65172.firebaseio.com",
@@ -12,17 +15,19 @@ import 'firebase/database';
     storageBucket: "m-city-65172.appspot.com",
     messagingSenderId: "894486813632"
   };
+  firebase.initializeApp(config); 
 
-firebase.initializeApp(config);
+    //Alias
+        const firebaseDB = firebase.database();
+        const firebaseMatches = firebaseDB.ref('matches');
+        const firebasePromotions = firebaseDB.ref('promotions');
 
-// Connect firebase
-const firebaseDB = firebase.database();
-const firebaseMatches = firebaseDB.ref('matches');
-const firebasePromotions = firebaseDB.ref('promotions');
 
 
 export {
-  firebase,
-  firebaseMatches,
-  firebasePromotions
+    firebase,
+    firebaseMatches,
+    firebasePromotions
+
+
 }
