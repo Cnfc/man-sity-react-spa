@@ -36,7 +36,7 @@ class AdminMatches extends Component {
         return (
             <AdminLayout>
                 <div className=''>
-                    <Papar>
+                    <Paper>
                         <Table>
                             <TableHead>
                                 <TableRow>
@@ -76,7 +76,7 @@ class AdminMatches extends Component {
                                 }
                             </TableBody>
                         </Table>
-                    </Papar>
+                    </Paper>
                 
                     <div className='admin_progress'>
                         {
