@@ -22,11 +22,27 @@ class AddEditMatch extends Component {
                 },
                 validation:{
                     required: true,
-                    email: true
                 },
                 valid: false,
                 validationMessage:'',
                 showlable: true
+            },
+
+            local: {
+                element:'select',
+                value:'',
+                config:{
+                    label: 'Select a local team',
+                    name:'select_local',
+                    type: 'select',
+                    options: []
+                },
+                validation:{
+                    required: true,
+                },
+                valid: false,
+                validationMessage:'',
+                showlable: false
             },
         }
 
@@ -44,6 +60,12 @@ class AddEditMatch extends Component {
                             <FormField 
                                 id={'date'}
                                 formdata={this.state.formdata.date}
+                                change={(element) => {this.updateForm(element)}}
+                            />
+
+                             <FormField 
+                                id={'loacl'}
+                                formdata={this.state.formdata.local}
                                 change={(element) => {this.updateForm(element)}}
                             />
                         </form>
