@@ -13,28 +13,43 @@ class AddEditMatch extends Component {
         teams:[],
         formdata: {
             date: {
-                email:{
-                    element:'input',
-                    value:'',
-                    config:{
-                        name:'email_input',
-                        type: 'email',
-                        placeholder: 'Enter your email'
-                    },
-                    validation:{
-                        required: true,
-                        email: true
-                    },
-                    valid: false,
-                    validationMessage:''
-                }
-            }
+                element:'input',
+                value:'',
+                config:{
+                    label: 'Event date',
+                    name:'date_input',
+                    type: 'date',
+                },
+                validation:{
+                    required: true,
+                    email: true
+                },
+                valid: false,
+                validationMessage:'',
+                showlable: true
+            },
         }
+
     }
 
     render() {
         return (
             <div>
+                <div className='editmatch_dialog_wrapper'>
+                    <h2>
+                        {this.state.formType}
+                    </h2>
+                    <div className=''>
+                        <form onSubmit={(event) => this.submitForm(event)}>
+                            <FormField 
+                                id={'date'}
+                                formdata={this.state.formdata.date}
+                                change={(element) => {this.updateForm(element)}}
+                            />
+                        </form>
+                    </div>
+                </div>
+                
                 
             </div>
         );
