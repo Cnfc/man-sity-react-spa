@@ -91,6 +91,36 @@ class AddEditMatch extends Component {
                 validationMessage:'',
                 showlable: true
             },
+            referee: {
+                element:'input',
+                value:'',
+                config:{
+                    label: 'Referee',
+                    name:'referee_input',
+                    type: 'text',
+                },
+                validation:{
+                    required: true,
+                },
+                valid: false,
+                validationMessage:'',
+                showlable: true
+            },
+            stadium: {
+                element:'input',
+                value:'',
+                config:{
+                    label: 'stadium',
+                    name:'stadium_input',
+                    type: 'text',
+                },
+                validation:{
+                    required: true,
+                },
+                valid: false,
+                validationMessage:'',
+                showlable: true
+            },
         }
 
     }
@@ -114,18 +144,18 @@ class AddEditMatch extends Component {
                                 <div className="label_inputs">Local</div>
                                 <div className='wrapper'>
                                     <div className='left'>
-                                    <FormField 
-                                        id={'local'}
-                                        formdata={this.state.formdata.local}
-                                        change={(element) => {this.updateForm(element)}}
-                                    />
-                                    </div>
-                                    <div className=''>
-                                    <FormField 
-                                        id={'resultLocal'}
-                                        formdata={this.state.formdata.resultLocal}
-                                        change={(element) => {this.updateForm(element)}}
-                                    />
+                                        <FormField 
+                                            id={'local'}
+                                            formdata={this.state.formdata.local}
+                                            change={(element) => {this.updateForm(element)}}
+                                        />
+                                        </div>
+                                        <div className=''>
+                                        <FormField 
+                                            id={'resultLocal'}
+                                            formdata={this.state.formdata.resultLocal}
+                                            change={(element) => {this.updateForm(element)}}
+                                        />
                                     </div>
                                 </div>
                             </div>
@@ -149,13 +179,21 @@ class AddEditMatch extends Component {
                                     </div>
                                 </div>
                             </div>
-                            
 
-                            <FormField 
-                                id={'local'}
-                                formdata={this.state.formdata.local}
-                                change={(element) => {this.updateForm(element)}}
-                            />
+                            <div className='split_fields'>
+                                <FormField 
+                                    id={'referee'}
+                                    formdata={this.state.formdata.referee}
+                                    change={(element) => {this.updateForm(element)}}
+                                />
+
+                                <FormField 
+                                    id={'stadium'}
+                                    formdata={this.state.formdata.stadium}
+                                    change={(element) => {this.updateForm(element)}}
+                                />
+                            </div>
+                            
                         </form>
                     </div>
                 </div>
