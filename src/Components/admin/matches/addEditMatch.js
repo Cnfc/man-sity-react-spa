@@ -44,6 +44,53 @@ class AddEditMatch extends Component {
                 validationMessage:'',
                 showlable: false
             },
+            resultLocal: {
+                element:'input',
+                value:'',
+                config:{
+                    label: 'resultLocal',
+                    name:'result_local_input',
+                    type: 'text',
+                },
+                validation:{
+                    required: true,
+                },
+                valid: false,
+                validationMessage:'',
+                showlable: true
+            },
+
+            away: {
+                element:'select',
+                value:'',
+                config:{
+                    label: 'Select a local team',
+                    name:'select_local',
+                    type: 'select',
+                    options: []
+                },
+                validation:{
+                    required: true,
+                },
+                valid: false,
+                validationMessage:'',
+                showlable: false
+            },
+            resultAway: {
+                element:'input',
+                value:'',
+                config:{
+                    label: 'resultLocal',
+                    name:'result_local_input',
+                    type: 'text',
+                },
+                validation:{
+                    required: true,
+                },
+                valid: false,
+                validationMessage:'',
+                showlable: true
+            },
         }
 
     }
@@ -63,8 +110,49 @@ class AddEditMatch extends Component {
                                 change={(element) => {this.updateForm(element)}}
                             />
 
-                             <FormField 
-                                id={'loacl'}
+                            <div className='select_team_layout'>
+                                <div className="label_inputs">Local</div>
+                                <div className='wrapper'>
+                                    <div className='left'>
+                                    <FormField 
+                                        id={'local'}
+                                        formdata={this.state.formdata.local}
+                                        change={(element) => {this.updateForm(element)}}
+                                    />
+                                    </div>
+                                    <div className=''>
+                                    <FormField 
+                                        id={'resultLocal'}
+                                        formdata={this.state.formdata.resultLocal}
+                                        change={(element) => {this.updateForm(element)}}
+                                    />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className='select_team_layout'>
+                                <div className="label_inputs">Away</div>
+                                <div className='wrapper'>
+                                    <div className='left'>
+                                    <FormField 
+                                        id={'away'}
+                                        formdata={this.state.formdata.away}
+                                        change={(element) => {this.updateForm(element)}}
+                                    />
+                                    </div>
+                                    <div className=''>
+                                    <FormField 
+                                        id={'resultAway'}
+                                        formdata={this.state.formdata.resultAway}
+                                        change={(element) => {this.updateForm(element)}}
+                                    />
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+                            <FormField 
+                                id={'local'}
                                 formdata={this.state.formdata.local}
                                 change={(element) => {this.updateForm(element)}}
                             />

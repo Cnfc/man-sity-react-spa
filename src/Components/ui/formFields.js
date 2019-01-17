@@ -58,7 +58,9 @@ const FormField = ({formdata,id,change}) => {
                                     </options>
                                 ))
                             }
+
                         </select>
+                        { showError() }
                     </div>
                 )
             break;
